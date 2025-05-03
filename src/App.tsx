@@ -9,6 +9,8 @@ import AboutPage from './pages/AboutPage';
 import './index.css';
 import './animation.css';
 
+import SubmitCodePage from "./pages/SubmitCodePage";
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
             <Route path="/games" element={<GamesPage />} />
             <Route path="/game/:id" element={<GamePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/submit" element={<SubmitCodePage />} />
           </Routes>
         </main>
         <Footer />

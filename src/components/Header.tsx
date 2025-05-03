@@ -1,31 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { TowerControl as GameController, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { TowerControl as GameController, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
-          : 'bg-transparent py-4'
+        isScrolled
+          ? "bg-gray-900/95 backdrop-blur-md shadow-lg py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link 
-          to="/" 
+        {/* Logo */}
+        <Link
+          to="/"
           className="flex items-center gap-2 text-xl font-bold text-white"
           onClick={() => setMobileMenuOpen(false)}
         >
@@ -40,9 +38,10 @@ const Header: React.FC = () => {
           <NavLink to="/" label="홈" />
           <NavLink to="/games" label="게임" />
           <NavLink to="/about" label="소개" />
-          <a 
-            href="https://github.com/SGCS-Release-Git-Project" 
-            target="_blank" 
+          <NavLink to="/submit" label="제출" /> {/* ★ 추가 */}
+          <a
+            href="https://github.com/SGCS-Release-Git-Project"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white transition-colors"
           >
@@ -51,16 +50,12 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-white p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="메뉴 열기/닫기"
         >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
@@ -71,9 +66,10 @@ const Header: React.FC = () => {
             <MobileNavLink to="/" label="홈" onClick={() => setMobileMenuOpen(false)} />
             <MobileNavLink to="/games" label="게임" onClick={() => setMobileMenuOpen(false)} />
             <MobileNavLink to="/about" label="소개" onClick={() => setMobileMenuOpen(false)} />
-            <a 
-              href="https://github.com/SGCS-Release-Git-Project" 
-              target="_blank" 
+            <MobileNavLink to="/submit" label="제출" onClick={() => setMobileMenuOpen(false)} /> {/* ★ 추가 */}
+            <a
+              href="https://github.com/SGCS-Release-Git-Project"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
@@ -91,10 +87,9 @@ interface NavLinkProps {
   to: string;
   label: string;
 }
-
 const NavLink: React.FC<NavLinkProps> = ({ to, label }) => (
-  <Link 
-    to={to} 
+  <Link
+    to={to}
     className="text-gray-300 hover:text-white transition-colors relative group"
   >
     {label}
@@ -105,10 +100,9 @@ const NavLink: React.FC<NavLinkProps> = ({ to, label }) => (
 interface MobileNavLinkProps extends NavLinkProps {
   onClick: () => void;
 }
-
 const MobileNavLink: React.FC<MobileNavLinkProps> = ({ to, label, onClick }) => (
-  <Link 
-    to={to} 
+  <Link
+    to={to}
     className="text-gray-300 hover:text-white transition-colors py-2 border-b border-gray-800"
     onClick={onClick}
   >
