@@ -3,7 +3,7 @@ import { Game } from '../types';
 export const GAMES: Game[] = [
   {
     id: 'trash-flight',
-    title: '쓰레기 비행',
+    title: 'Trash Flight',
     description: '이 흥미진진한 아케이드 게임에서 우주를 탐험하며 쓰레기를 수집하고 장애물을 피하세요!',
     thumbnail: 'https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     url: 'https://yjs2673.github.io/Trash-Flight',
