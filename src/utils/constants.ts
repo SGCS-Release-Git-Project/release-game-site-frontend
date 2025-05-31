@@ -2,32 +2,34 @@ import { Game } from '../types';
 
 export const GAMES: Game[] = [
   {
-    id: 'trash-flight',
-    title: 'Trash Flight',
-    description: '이 흥미진진한 아케이드 게임에서 우주를 탐험하며 쓰레기를 수집하고 장애물을 피하세요!',
-    thumbnail: 'https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    url: 'https://yjs2673.github.io/Games-Web/Trash-Flight/index.html',
+    id: 'sogang-arcade',
+    title: 'Sogang Arcade',
+    description: '넥슨 크레이지 아케이드를 재해석한 Sogang Arcade. Unity 2022.3 ver',
+    thumbnail: '/images/sogang-arcade.png',
+    url: 'https://yjs2673.github.io/Games-Web/Sogang-Arcade/index.html',
     featured: true,
-    tags: ['아케이드', '우주', '액션'],
-    releaseDate: '2024'
+    tags: ['2D', '아케이드', '액션'],
+    releaseDate: '2025.05.31'
   },
   {
-    id: 'pixel-adventure',
-    title: '픽셀 어드벤처',
-    description: '이 모험 게임에서 다채로운 픽셀 세계를 탐험하고 도전적인 퍼즐을 해결하세요.',
-    thumbnail: 'https://images.pexels.com/photos/2816903/pexels-photo-2816903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    url: '#coming-soon',
-    tags: ['모험', '퍼즐'],
-    releaseDate: '출시 예정'
+    id: 'shooting-flight',
+    title: 'Shooting Flight',
+    description: '2D 종스크롤 슈팅 장르의 Shooting Flight. Unity 2022.3 ver',
+    thumbnail: '/images/shooting-flight.png',
+    url: 'https://yjs2673.github.io/Games-Web/Shooting-Flight/index.html',
+    featured: true,
+    tags: ['2D', '아케이드', '종스크롤'],
+    releaseDate: '2025.05.31'
   },
   {
-    id: 'code-runner',
-    title: '코드 러너',
-    description: '시간 제한 안에 프로그래밍 과제를 해결하는 빠른 템포의 게임에서 당신의 코딩 실력을 시험해보세요.',
-    thumbnail: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    url: '#coming-soon',
-    tags: ['교육', '퍼즐', '코딩'],
-    releaseDate: '출시 예정'
+    id: 'undead-survivor',
+    title: 'Undead Survivor',
+    description: '시간 제한 안에 몬스터를 무찌르며 생존하는 Undead Survivor. Unity 2022.3 ver',
+    thumbnail: '/images/undead-survivor.png',
+    url: 'https://yjs2673.github.io/Games-Web/Undead-Survivor/index.html',
+    featured: true,
+    tags: ['2D', '아케이트', '액션'],
+    releaseDate: '2025.05.31'
   },
   {
     id: 'sogang-defense',
