@@ -12,6 +12,15 @@ export const GAMES: Game[] = [
     releaseDate: '2025.05.31'
   },
   {
+    id: 'dino-run',
+    title: 'Dino Run',
+    description: '장애물을 피하면서 계속 달려나가는 Dino Run',
+    thumbnail: '/images/dino-run.png',
+    url: 'https://yjs2673.github.io/Games-Web/Dino-Run/index.html',
+    tags: ['2D', '피하기', '횡스크롤'],
+    releaseDate: '출시 2025.06.06'
+  },
+  {
     id: 'shooting-flight',
     title: 'Shooting Flight',
     description: '2D 종스크롤 슈팅 장르의 Shooting Flight. Unity 2022.3 ver',
@@ -56,15 +65,6 @@ export const GAMES: Game[] = [
     thumbnail: '/images/icon-game.png',
     url: '#comming soon',
     tags: ['2D', '키우기', '방치형'],
-    releaseDate: '출시 예정'
-  },
-  {
-    id: 'dino-run',
-    title: 'Dino Run',
-    description: '장애물을 피하면서 계속 달려나가는 Dino Run',
-    thumbnail: '/images/icon-game.png',
-    url: '#comming soon',
-    tags: ['2D', '피하기', '횡스크롤'],
     releaseDate: '출시 예정'
   }
 ];
